@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kerf Checker</title>
+    <link rel="stylesheet" href="dist/css/kerfChcker.css">
+</head>
+
+
+<body>
+    <h3>Create Kerf Checker</h3>
+    <div class="h" id="js">
+        <form name="par_form" action="kerf_check.html">
+            <table>
+                <tr>
+                    <th>Kerf Checker 高さ:</th>
+                    <th><input type="text" name="form_wid" size="4" value=""></th>
+                    <th>mm</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>基準幅(start):</th>
+                    <th><input type="text" name="form_st" size="4" value="2.5"></th>
+                    <th>mm</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>刻み幅(pitch):</th>
+                    <th><input type="text" name="form_inc" size="4" value="-0.05"></th>
+                    <th>mm</th>
+                    <th>1/100単位までしか設定できません　インクリメント、ディクリメント可能です。</th>
+                </tr>
+                <tr>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>繰り返し(loop):</th>
+                    <th><input type="text" name="form_lp" size="4" value="11"></th>
+                    <th>回(step)</th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <th>ドックボーン(直径):</th>
+                    <th><input type="text" name="form_dog" size="4" value=""></th>
+                    <th>mm</th>
+                    <th></th>
+                </tr>
+
+            </table>
+            <br>
+            <input id="bt" type="button" value="Create SVG" onclick="calsvg()"><br>
+
+        </form>
+        <script src="kerfChecker.js"></script>
+        ↓<br>
+        <a id="download" href="#" download="kerf_checker.svg">ダウンロード</a>
+        <br><br>
+
+    </div>
+
+
+
+
+</body>
